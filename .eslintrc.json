@@ -1,0 +1,63 @@
+{
+	"root": true,
+	"extends": [
+		"@react-native-community",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"prettier",
+		"plugin:react-hooks/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": ["./tsconfig.json"],
+		"extraFileExtensions": [".json"]
+	},
+	"plugins": ["react", "import", "@typescript-eslint"],
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"],
+				"paths": ["src"]
+			}
+		}
+	},
+	"rules": {
+		"no-console": "error",
+		"no-shadow": "off",
+		"no-undef": "off",
+		"indent": ["warn", "tab", { "SwitchCase": 1 }],
+		"react/jsx-uses-react": "off",
+		"react/jsx-curly-brace-presence": "error",
+		"import/no-commonjs": "off",
+		"import/named": "off",
+		"import/namespace": "off",
+		"react/react-in-jsx-scope": "off",
+		//  "@typescript-eslint/no-var-requires": "off",
+		//  "@typescript-eslint/no-explicit-any": "off",
+		//	"@typescript-eslint/no-empty-function": "off",
+		"@typescript-eslint/ban-ts-comment": "off",
+		"@typescript-eslint/explicit-function-return-type": [
+			"off",
+			{
+				"allowExpressions": true
+			}
+		],
+		"@typescript-eslint/no-shadow": ["error"],
+		"jsx-quotes": ["error", "prefer-double"],
+		"import/order": [
+			"error",
+			{
+				"groups": [
+					"builtin",
+					"external",
+					"internal",
+					"parent",
+					"sibling",
+					"index"
+				]
+			}
+		]
+	}
+}
